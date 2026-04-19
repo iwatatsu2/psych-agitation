@@ -10,6 +10,9 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   title: "不穏時対応ガイド",
   description: "精神科入院患者の不穏時対応クイックリファレンス",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export const viewport: Viewport = {
