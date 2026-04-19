@@ -34,12 +34,20 @@ export default function RootLayout({
             <a href="/" className="text-lg font-bold tracking-tight">
               不穏時対応ガイド
             </a>
-            <a
-              href="/drugs"
-              className="text-sm text-slate-400 hover:text-white transition-colors"
-            >
-              薬剤一覧
-            </a>
+            <div className="flex items-center gap-4">
+              <a
+                href="/delirium"
+                className="text-sm text-slate-400 hover:text-white transition-colors"
+              >
+                せん妄
+              </a>
+              <a
+                href="/drugs"
+                className="text-sm text-slate-400 hover:text-white transition-colors"
+              >
+                薬剤一覧
+              </a>
+            </div>
           </div>
         </header>
         <main className="max-w-2xl mx-auto px-4 py-6">{children}</main>

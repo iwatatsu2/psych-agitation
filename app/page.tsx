@@ -48,6 +48,20 @@ export default function Home() {
         </Link>
       ))}
 
+      <Link href="/delirium" className="block group mt-4">
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 p-6 transition-transform active:scale-[0.98]">
+          <div className="relative z-10">
+            <span className="text-2xl font-bold text-white">せん妄対応</span>
+            <p className="text-white/90 text-sm mt-1">
+              診断・臨床像・薬物療法・アルコール離脱せん妄
+            </p>
+          </div>
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 text-white/20 text-5xl font-black">
+            D
+          </div>
+        </div>
+      </Link>
+
       <div className="mt-8 p-4 rounded-xl bg-slate-900 border border-red-900/50">
         <h2 className="text-sm font-semibold text-red-400 mb-3">
           免責事項・使用上の注意
