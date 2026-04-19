@@ -48,16 +48,32 @@ export default function Home() {
         </Link>
       ))}
 
-      <div className="mt-8 p-4 rounded-xl bg-slate-900 border border-slate-800">
-        <h2 className="text-sm font-semibold text-slate-300 mb-2">
-          使用上の注意
+      <div className="mt-8 p-4 rounded-xl bg-slate-900 border border-red-900/50">
+        <h2 className="text-sm font-semibold text-red-400 mb-3">
+          免責事項・使用上の注意
         </h2>
-        <ul className="text-xs text-slate-500 space-y-1">
+        <ul className="text-xs text-slate-400 space-y-2">
           <li>
-            本アプリは参考情報です。実際の対応は施設のプロトコルに従ってください。
+            本アプリは医療従事者向けの参考資料であり、医学的助言を提供するものではありません。
           </li>
-          <li>薬剤投与は必ず医師の指示のもとで行ってください。</li>
-          <li>患者の個別性を考慮した判断が必要です。</li>
+          <li>
+            掲載内容は一般的な対応例であり、すべての患者・状況に適用されるものではありません。実際の対応は各施設のプロトコル・マニュアルに従ってください。
+          </li>
+          <li>
+            薬剤の投与は必ず医師の診察・指示のもとで行ってください。用法・用量は患者の年齢、体重、腎機能・肝機能、併用薬等を考慮し個別に判断する必要があります。
+          </li>
+          <li>
+            身体拘束を行う場合は、精神保健及び精神障害者福祉に関する法律（精神保健福祉法）に基づく適切な手続きを遵守してください。
+          </li>
+          <li>
+            本アプリの情報に基づいて行われた医療行為の結果について、開発者は一切の責任を負いません。
+          </li>
+          <li>
+            掲載されている薬剤情報は作成時点のものです。最新の添付文書・ガイドラインを必ず確認してください。
+          </li>
+          <li>
+            本アプリに患者の個人情報を入力・保存する機能はありません。
+          </li>
         </ul>
       </div>
     </div>
