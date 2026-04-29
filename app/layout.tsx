@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
+import InstallBanner from "@/components/InstallBanner";
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
@@ -10,6 +11,7 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   title: "不穏時対応ガイド",
   description: "精神科入院患者の不穏時対応クイックリファレンス",
+  manifest: "/manifest.json",
   icons: {
     icon: "/icon.svg",
   },
@@ -51,6 +53,7 @@ export default function RootLayout({
           </div>
         </header>
         <main className="max-w-2xl mx-auto px-4 py-6">{children}</main>
+        <InstallBanner />
       </body>
     </html>
   );
