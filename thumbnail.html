@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  .container {
+    width: 1280px;
+    height: 720px;
+    background: linear-gradient(135deg, #0f0a1a 0%, #2e1a44 50%, #0f0a1a 100%);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .left {
+    width: 780px;
+    padding: 28px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 2;
+  }
+
+  .badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 20px;
+    width: fit-content;
+    margin-bottom: 14px;
+  }
+
+  .title-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .title {
+    font-size: 68px;
+    font-weight: 900;
+    color: white;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+
+  .title .accent {
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .free-badge {
+    display: inline-block;
+    background: #22c55e;
+    color: white;
+    font-size: 32px;
+    font-weight: 900;
+    padding: 10px 28px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+  }
+
+  .subtitle {
+    font-size: 26px;
+    color: #c4b5fd;
+    margin-top: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .sections {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 24px;
+  }
+
+  .section-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #e2e8f0;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 3px 0;
+  }
+
+  .section-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  .icon-yellow { background: linear-gradient(135deg, #eab308, #ca8a04); }
+  .icon-orange { background: linear-gradient(135deg, #f97316, #ea580c); }
+  .icon-red { background: linear-gradient(135deg, #ef4444, #dc2626); }
+  .icon-purple { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+  .icon-blue { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+
+  .features {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .feat {
+    background: rgba(139,92,246,0.15);
+    border: 1px solid rgba(139,92,246,0.3);
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    color: #c4b5fd;
+  }
+
+  .author {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .author-name {
+    color: #8b5cf6;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .author-role {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 2px;
+  }
+
+  .right {
+    position: absolute;
+    right: -40px;
+    bottom: 0;
+    width: 520px;
+    height: 720px;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .right img {
+    height: 660px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 40px rgba(0,0,0,0.5));
+  }
+
+  .bg-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 1;
+  }
+
+  .bg-glow-1 {
+    background: #8b5cf6;
+    width: 500px; height: 500px;
+    top: -150px; right: 150px;
+    opacity: 0.12;
+  }
+
+  .bg-glow-2 {
+    background: #7c3aed;
+    width: 500px; height: 500px;
+    bottom: -200px; left: 100px;
+    opacity: 0.12;
+  }
+
+  .bg-glow-3 {
+    background: #8b5cf6;
+    width: 400px; height: 400px;
+    bottom: 0; right: 100px;
+    opacity: 0.08;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+
+  <div class="left">
+    <div class="badge">精神科病棟 当直医・看護師向け</div>
+    <div class="title-row">
+      <h1 class="title"><span class="accent">不穏時</span>対応ガイド</h1>
+      <span class="free-badge">無料</span>
+    </div>
+    <p class="subtitle">夜間当直、もう迷わない<br>不穏時対応を3秒で確認</p>
+
+    <div class="sections">
+      <div class="section-item"><div class="section-icon icon-yellow">⚡</div>軽度：興奮・焦燥</div>
+      <div class="section-item"><div class="section-icon icon-purple">🧠</div>せん妄対応ガイド</div>
+      <div class="section-item"><div class="section-icon icon-orange">🔥</div>中等度：暴言・物損</div>
+      <div class="section-item"><div class="section-icon icon-blue">💊</div>薬剤クイックリファレンス</div>
+      <div class="section-item"><div class="section-icon icon-red">🚨</div>重度：暴力・自傷他害</div>
+      <div class="section-item"><div class="section-icon icon-red">🚔</div>警察通報フロー</div>
+    </div>
+
+    <div class="features">
+      <span class="feat">3段階対応フロー</span>
+      <span class="feat">環境調整チェック</span>
+      <span class="feat">リスペリドン優先</span>
+      <span class="feat">アルコール離脱せん妄</span>
+      <span class="feat">ダークモード固定</span>
+    </div>
+
+    <div class="author">
+      <div>
+        <div class="author-name">Dr. いわたつ</div>
+        <div class="author-role">糖尿病・内分泌専門医</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <img src="../medapp-market/dr-iwatatsu.png" alt="Dr. いわたつ">
+  </div>
+</div>
+</body>
+</html>
